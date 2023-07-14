@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
     res.send("API server is working successfully.")
 })
 
+app.get('/home', (req, res) => {
+    res.json({
+        message: "This is after updates with: CI/CD pipeline."
+    })
+})
+
 app.post('/usercreate', registerUser);
 
 app.get('/getAllUsers', getAllUser);
